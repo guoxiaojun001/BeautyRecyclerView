@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setSwipeRefreshColors(0xFF437845, 0xFFE44F98, 0xFF2FAC21);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(mAdapter);
+
         mRecyclerView.setRefreshAction(new Action() {
             @Override
             public void onAction() {
@@ -137,7 +138,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.multi_adapter) {
-            startActivity(new Intent(this, MultiTypeActivity.class));
+//            startActivity(new Intent(this, MultiTypeActivity.class));
+            startActivity(new Intent(MainActivity.this,TTActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
